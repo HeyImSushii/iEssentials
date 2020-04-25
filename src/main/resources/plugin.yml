@@ -1,0 +1,12 @@
+name: iEssentials
+version: 1.0.0
+main: me.heyimsushii.iessentials.iEssentials
+api-version: 1.15
+
+commands:
+  test:
+    description: test command
+    permission: iessentials.test
+  help:
+    description: Shows a list of commands.
+    permission: iessentials.help
