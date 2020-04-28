@@ -1,7 +1,7 @@
-package me.heyimsushii.iessentials.commands.information;
+package me.heyimsushii.iessentials.command.commands;
 
-import me.heyimsushii.iessentials.iEssentials;
-import me.heyimsushii.iessentials.util.command.AbstractCommand;
+import me.heyimsushii.iessentials.IEssentials;
+import me.heyimsushii.iessentials.command.AbstractCommand;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -31,7 +31,7 @@ public class CommandHelp extends AbstractCommand {
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m+                       &e&lHelp&7&m                       +"));
-        for (AbstractCommand cmd : iEssentials.getCommandRegister().getCommandMap().values()) {
+        for (AbstractCommand cmd : IEssentials.getCommandRegister().getCommands().values()) {
             player.sendMessage(ChatColor.YELLOW + "/" + cmd.getCommand() + " " + cmd.getUsage() + ChatColor.DARK_GRAY + " - " + ChatColor.GRAY + cmd.getDescription());
         }
     }

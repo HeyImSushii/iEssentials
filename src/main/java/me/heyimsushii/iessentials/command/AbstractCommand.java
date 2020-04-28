@@ -1,6 +1,6 @@
-package me.heyimsushii.iessentials.util.command;
+package me.heyimsushii.iessentials.command;
 
-import me.heyimsushii.iessentials.util.lang.Lang;
+import me.heyimsushii.iessentials.IEssentials;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -22,12 +22,13 @@ public abstract class AbstractCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!(sender.hasPermission(getPermission()))) {
-            player.sendMessage(Lang.NO_PERMISSION.getMessage());
+            player.sendMessage(IEssentials.getMessages().getMessage("no-permission"));
             return true;
         }
 
         if (args.length < getRequiredArgs()) {
-            player.sendMessage(Lang.INVALID_ARGS.getMessage());
+            player.sendMessage(IEssentials.getMessages().getMessage("invalid-args")
+                    .replace("{COMMAND}", getCommand()).replace("{USAGE}", getUsage()));
             return true;
         }
         execute(sender, command, commandName, args);

@@ -1,12 +1,15 @@
-name: iEssentials
-version: 1.0.0
-main: me.heyimsushii.iessentials.iEssentials
+name: IEssentials
+version: 1.1.0
+main: me.heyimsushii.iessentials.IEssentials
 api-version: 1.15
 
 commands:
-  test:
-    description: test command
-    permission: iessentials.test
   help:
     description: Shows a list of commands.
     permission: iessentials.help
+  ping:
+    description: Returns 'Pong!'.
+    permission: iessentials.ping
+  gamemode:
+    description: Changes your gamemode.
+    permission: iessentials.gamemode
