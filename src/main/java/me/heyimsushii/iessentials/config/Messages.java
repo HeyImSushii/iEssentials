@@ -25,12 +25,15 @@ public class Messages {
                 set("prefix", "&8&l| &e&liEssentials &8&l| ");
 
                 /* Error Messages */
+                set("player-only-command", getMessageRaw("prefix") + "&4You must be a player in order to execute this command!");
                 set("no-permission", getMessageRaw("prefix") + "&4Sorry, but you do not have the sufficient permission to do this.");
                 set("invalid-args", getMessageRaw("prefix") + "&7/{COMMAND} {USAGE}");
 
-                /* Other */
+                /* Messages */
                 set("ping-message", getMessageRaw("prefix") + "&7Pong!");
-                set("gamemode-changed", getMessageRaw("prefix") + "&7You are now in &6{GAMEMODE}");
+                set("gamemode-changed", getMessageRaw("prefix") + "&7You are now in &e{GAMEMODE} mode.");
+                set("player-healed", getMessageRaw("prefix") + "&7You have been healed by &e{PLAYERNAME}.");
+                set("player-fed", getMessageRaw("prefix") + "&7You have been fed by &e{PLAYERNAME}.");
                 save();
             } catch (IOException e) {
                 e.printStackTrace();

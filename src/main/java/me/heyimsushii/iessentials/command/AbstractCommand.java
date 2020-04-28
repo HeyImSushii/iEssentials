@@ -21,6 +21,11 @@ public abstract class AbstractCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
 
+        if (!(sender instanceof Player)) {
+            sender.sendMessage(IEssentials.getMessages().getMessage("player-only-command"));
+            return true;
+        }
+
         if (!(sender.hasPermission(getPermission()))) {
             player.sendMessage(IEssentials.getMessages().getMessage("no-permission"));
             return true;

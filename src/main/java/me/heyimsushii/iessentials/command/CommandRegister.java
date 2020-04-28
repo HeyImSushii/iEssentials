@@ -1,9 +1,7 @@
 package me.heyimsushii.iessentials.command;
 
 import me.heyimsushii.iessentials.IEssentials;
-import me.heyimsushii.iessentials.command.commands.CommandGamemode;
-import me.heyimsushii.iessentials.command.commands.CommandHelp;
-import me.heyimsushii.iessentials.command.commands.CommandPing;
+import me.heyimsushii.iessentials.command.commands.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,6 +14,10 @@ public class CommandRegister {
         addCommand("help", new CommandHelp());
         addCommand("ping", new CommandPing());
         addCommand("gamemode", new CommandGamemode());
+        addCommand("whois", new CommandWhois());
+        addCommand("list", new CommandList());
+        addCommand("heal", new CommandHeal());
+        addCommand("feed", new CommandFeed());
 
         for (AbstractCommand command : commands.values()) {
             IEssentials.getInstance().getCommand(command.getCommand()).setExecutor(command);

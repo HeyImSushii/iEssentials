@@ -25,7 +25,7 @@ public class CommandGamemode extends AbstractCommand {
 
     @Override
     public String getUsage() {
-        return "gamemode <survival|adventure|creative|spectator>";
+        return "<mode>";
     }
 
     @Override
@@ -38,34 +38,35 @@ public class CommandGamemode extends AbstractCommand {
         Player player = (Player) sender;
         switch (args[0]) {
             case "survival":
-                player.setGameMode(GameMode.SURVIVAL);
-                player.sendMessage(IEssentials.getMessages().getMessage("gamemode-changed")
-                        .replace("{GAMEMODE}", GameMode.SURVIVAL.name()));
+                setMode(player, GameMode.SURVIVAL);
+                break;
+            case "0":
+                setMode(player, GameMode.SURVIVAL);
                 break;
             case "adventure":
-                player.setGameMode(GameMode.ADVENTURE);
-                player.sendMessage(IEssentials.getMessages().getMessage("gamemode-changed")
-                        .replace("{GAMEMODE}", GameMode.ADVENTURE.name()));
+                setMode(player, GameMode.ADVENTURE);
+                break;
+            case "2":
+                setMode(player, GameMode.ADVENTURE);
                 break;
             case "creative":
-                player.setGameMode(GameMode.CREATIVE);
-                player.sendMessage(IEssentials.getMessages().getMessage("gamemode-changed")
-                        .replace("{GAMEMODE}", GameMode.CREATIVE.name()));
+                setMode(player, GameMode.CREATIVE);
+                break;
+            case "1":
+                setMode(player, GameMode.CREATIVE);
                 break;
             case "spectator":
-                player.setGameMode(GameMode.SPECTATOR);
-                player.sendMessage(IEssentials.getMessages().getMessage("gamemode-changed")
-                        .replace("{GAMEMODE}", GameMode.SPECTATOR.name()));
+                setMode(player, GameMode.SPECTATOR);
                 break;
-            default:
-                player.sendMessage(IEssentials.getMessages().getMessage("invalid-args")
-                        .replace("{COMMAND}", getCommand()).replace("{USAGE}", getUsage()));
+            case "3":
+                setMode(player, GameMode.SPECTATOR);
                 break;
         }
     }
 
-
-    private void setGameMode(Player player, GameMode gameMode) {
-
+    private void setMode(Player player, GameMode gameMode) {
+        player.setGameMode(gameMode);
+        player.sendMessage(IEssentials.getMessages().getMessage("gamemode-changed")
+                .replace("{GAMEMODE}", gameMode.name().toLowerCase()));
     }
 }

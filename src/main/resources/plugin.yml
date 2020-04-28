@@ -2,7 +2,7 @@ name: iEssentials
 version: 1.1.1
 main: me.heyimsushii.iessentials.IEssentials
 api-version: 1.15
-
+author: Ludvik "HeyImSushii" Sørensen
 commands:
   help:
     description: Shows a list of commands.
@@ -13,3 +13,21 @@ commands:
   gamemode:
     description: Changes your gamemode.
     permission: iessentials.gamemode
+    aliases:
+      - gm
+  whois:
+    description: Shows information about a player.
+    permission: iessentials.whois
+  list:
+    description: Shows a list of online players.
+    permission: iessentials.list
+    aliases:
+      - playerlist
+  heal:
+    description: Heals a player.
+    permission: iessentials.heal
+    aliases:
+  feed:
+    description: Feeds a player.
+    permission: iessentials.feed
+    aliases:
