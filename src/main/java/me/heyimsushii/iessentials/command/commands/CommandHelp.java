@@ -13,7 +13,7 @@ public class CommandHelp extends AbstractCommand {
     }
 
     public String getDescription() {
-        return "Shows a list of commands.";
+        return "Shows a list of commands. tst";
     }
 
     public String getPermission() {
