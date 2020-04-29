@@ -10,11 +10,10 @@ import java.io.IOException;
 
 public class Messages {
 
-    private File file;
-    private YamlConfiguration config = new YamlConfiguration();
+    private final File file = new File(IEssentials.getInstance().getDataFolder(), "messages.yml");
+    private final YamlConfiguration config = new YamlConfiguration();
 
     public void load() {
-        file = new File(IEssentials.getInstance().getDataFolder(), "messages.yml");
         if (!file.exists()) {
             try {
                 file.createNewFile();
@@ -34,6 +33,10 @@ public class Messages {
                 set("gamemode-changed", getMessageRaw("prefix") + "&7You are now in &e{GAMEMODE} mode.");
                 set("player-healed", getMessageRaw("prefix") + "&7You have been healed by &e{PLAYERNAME}.");
                 set("player-fed", getMessageRaw("prefix") + "&7You have been fed by &e{PLAYERNAME}.");
+                set("player-not-found", getMessage("prefix") + "&4Player not found.");
+                set("player-already-banned", getMessage("prefix") + "&4Player is already banned.");
+                set("player-not-bannable", getMessage("prefix") + "&4You cannot ban this player.");
+                set("player-banned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been banned.");
                 save();
             } catch (IOException e) {
                 e.printStackTrace();

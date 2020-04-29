@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class Config {
 
-    private File file = new File(IEssentials.getInstance().getDataFolder(), "config.yml");
-    private YamlConfiguration config = new YamlConfiguration();
+    private final File file = new File(IEssentials.getInstance().getDataFolder(), "config.yml");
+    private final YamlConfiguration config = new YamlConfiguration();
 
     public void load() {
         if (!file.exists()) {

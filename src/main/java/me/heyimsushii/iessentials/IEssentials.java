@@ -5,6 +5,7 @@ import me.heyimsushii.iessentials.config.Config;
 import me.heyimsushii.iessentials.config.Messages;
 import me.heyimsushii.iessentials.events.PlayerJoin;
 import me.heyimsushii.iessentials.events.PlayerLeave;
+import me.heyimsushii.iessentials.events.PlayerLogin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -41,6 +42,7 @@ public class IEssentials extends JavaPlugin {
         PluginManager pm = Bukkit.getPluginManager();
         pm.registerEvents(new PlayerJoin(), this);
         pm.registerEvents(new PlayerLeave(), this);
+        pm.registerEvents(new PlayerLogin(), this);
     }
 
     public static IEssentials getInstance() {

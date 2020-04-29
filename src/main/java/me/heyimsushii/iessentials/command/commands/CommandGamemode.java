@@ -38,26 +38,18 @@ public class CommandGamemode extends AbstractCommand {
         Player player = (Player) sender;
         switch (args[0]) {
             case "survival":
-                setMode(player, GameMode.SURVIVAL);
-                break;
             case "0":
                 setMode(player, GameMode.SURVIVAL);
                 break;
             case "adventure":
-                setMode(player, GameMode.ADVENTURE);
-                break;
             case "2":
                 setMode(player, GameMode.ADVENTURE);
                 break;
             case "creative":
-                setMode(player, GameMode.CREATIVE);
-                break;
             case "1":
                 setMode(player, GameMode.CREATIVE);
                 break;
             case "spectator":
-                setMode(player, GameMode.SPECTATOR);
-                break;
             case "3":
                 setMode(player, GameMode.SPECTATOR);
                 break;

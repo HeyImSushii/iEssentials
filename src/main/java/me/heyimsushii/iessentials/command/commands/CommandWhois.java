@@ -1,6 +1,7 @@
 package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.command.AbstractCommand;
+import me.heyimsushii.iessentials.util.TextUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -43,15 +44,15 @@ public class CommandWhois extends AbstractCommand {
         int y = target.getLocation().getBlockY();
         int z = target.getLocation().getBlockX();
 
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m+                                                  +"));
+        player.sendMessage(TextUtils.line(64));
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Player Name: " + ChatColor.GRAY + target.getName());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " IP Address: " + ChatColor.GRAY + target.getAddress().getHostName());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Health: " + ChatColor.GRAY + target.getHealth() + "/" + target.getMaxHealth());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Hunger: " + ChatColor.GRAY + target.getFoodLevel() + "/20");
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " XP Level: " + ChatColor.GRAY + target.getLevel());
-        player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Location: XZY:   " + ChatColor.GRAY + x + " / " + y + " / " + z);
+        player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Location: XZY: " + ChatColor.GRAY + x + " / " + y + " / " + z);
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Gamemode: " + ChatColor.GRAY + target.getGameMode().name().toLowerCase());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Fly mode: " + ChatColor.GRAY + target.isFlying());
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7&m+                                                  +"));
+        player.sendMessage(TextUtils.line(64));
     }
 }

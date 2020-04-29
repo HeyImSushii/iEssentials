@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class CommandRegister {
 
-    private Map<String, AbstractCommand> commands = new HashMap<>();
+    private final Map<String, AbstractCommand> commands = new HashMap<>();
 
     public CommandRegister() {
         addCommand("help", new CommandHelp());
@@ -18,16 +18,15 @@ public class CommandRegister {
         addCommand("list", new CommandList());
         addCommand("heal", new CommandHeal());
         addCommand("feed", new CommandFeed());
+        addCommand("banlist", new CommandBanlist());
+        addCommand("ban", new CommandBan());
 
-        for (AbstractCommand command : commands.values()) {
+        for (AbstractCommand command : commands.values())
             IEssentials.getInstance().getCommand(command.getCommand()).setExecutor(command);
-        }
     }
 
     private void addCommand(String commandName, AbstractCommand abstractCommand) {
-        if (!commands.containsValue(abstractCommand)) {
-            commands.put(commandName, abstractCommand);
-        }
+        if (!commands.containsValue(abstractCommand)) commands.put(commandName, abstractCommand);
     }
 
     public Map<String, AbstractCommand> getCommands() {

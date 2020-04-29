@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e81c4e91-cb2b-48a8-8cec-94836baa0496" name="Default Changelist" comment="Test">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandBan.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandBanlist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/events/PlayerLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/HeyImSushii.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/HeyImSushii.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/IEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/IEssentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/CommandRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/CommandRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandGamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandGamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandHelp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandWhois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandWhois.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Messages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/util/TextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/util/TextUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1bD8STRKCiAKzRPCvLtrFPY5kxa" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="me.heyimsushii.iessentials.config" />
+      <recent name="me.heyimsushii.iessentials.command.commands" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn package" />
+      <command value="mvn " />
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e81c4e91-cb2b-48a8-8cec-94836baa0496" name="Default Changelist" comment="" />
+      <created>1588155303896</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588155303896</updated>
+      <workItem from="1588155306655" duration="474000" />
+      <workItem from="1588160663634" duration="317000" />
+      <workItem from="1588161072451" duration="1230000" />
+      <workItem from="1588187156687" duration="3017000" />
+      <workItem from="1588193297684" duration="4638000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test">
+      <created>1588155365125</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588155365125</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1588193531783">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588193531783" />
+    <state x="450" y="6" key="CommitChangelistDialog2" timestamp="1588197871768">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="450" y="6" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197871768" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588197909696">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197909696" />
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1588197755042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1588197755042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1588197755042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1588197755042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588155401327">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588155401327" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1588197747610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197747610" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588197746841">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197746841" />
+  </component>
+</project>
