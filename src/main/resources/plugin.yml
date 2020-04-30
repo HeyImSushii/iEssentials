@@ -1,7 +1,7 @@
 name: iEssentials
-version: 1.1.1
+version: 1.0.0
 main: me.heyimsushii.iessentials.IEssentials
-api-version: 1.15
+api-version: 1.15.0
 author: Ludvik "HeyImSushii" Sørensen
 commands:
   help:

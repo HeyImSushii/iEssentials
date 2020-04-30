@@ -3,6 +3,7 @@ package me.heyimsushii.iessentials;
 import me.heyimsushii.iessentials.command.CommandRegister;
 import me.heyimsushii.iessentials.config.Config;
 import me.heyimsushii.iessentials.config.Messages;
+import me.heyimsushii.iessentials.events.PlayerChat;
 import me.heyimsushii.iessentials.events.PlayerJoin;
 import me.heyimsushii.iessentials.events.PlayerLeave;
 import me.heyimsushii.iessentials.events.PlayerLogin;
@@ -43,6 +44,7 @@ public class IEssentials extends JavaPlugin {
         pm.registerEvents(new PlayerJoin(), this);
         pm.registerEvents(new PlayerLeave(), this);
         pm.registerEvents(new PlayerLogin(), this);
+        pm.registerEvents(new PlayerChat(), this);
     }
 
     public static IEssentials getInstance() {

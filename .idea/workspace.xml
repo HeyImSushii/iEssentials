@@ -16,23 +16,26 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e81c4e91-cb2b-48a8-8cec-94836baa0496" name="Default Changelist" comment="Test">
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandBan.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandBanlist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/events/PlayerLogin.java" afterDir="false" />
+    <list default="true" id="e81c4e91-cb2b-48a8-8cec-94836baa0496" name="Default Changelist" comment="Updated.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandKick.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/events/PlayerChat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/HeyImSushii.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/HeyImSushii.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/IEssentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/IEssentials.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/CommandRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/CommandRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandGamemode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandGamemode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandBan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandBan.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandHelp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandHelp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandWhois.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/command/commands/CommandWhois.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Messages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/config/Messages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/util/TextUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/heyimsushii/iessentials/util/TextUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,14 +70,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="me.heyimsushii.iessentials.config" />
       <recent name="me.heyimsushii.iessentials.command.commands" />
+      <recent name="me.heyimsushii.iessentials.config" />
     </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="mvn package" />
       <command value="mvn " />
+      <command value="mvn package" />
     </option>
   </component>
   <component name="SvnConfiguration">
@@ -91,7 +94,8 @@
       <workItem from="1588160663634" duration="317000" />
       <workItem from="1588161072451" duration="1230000" />
       <workItem from="1588187156687" duration="3017000" />
-      <workItem from="1588193297684" duration="4638000" />
+      <workItem from="1588193297684" duration="5173000" />
+      <workItem from="1588228593451" duration="2568000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1588155365125</created>
@@ -100,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588155365125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated.">
+      <created>1588198032925</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588198032925</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,48 +131,49 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test" />
+    <MESSAGE value="Updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated." />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1588193531783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588193531783" />
-    <state x="450" y="6" key="CommitChangelistDialog2" timestamp="1588197871768">
+    <state x="450" y="6" key="CommitChangelistDialog2" timestamp="1588198154029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="450" y="6" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197871768" />
+    <state x="450" y="6" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588198154029" />
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1588197909696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197909696" />
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1588197755042">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom" timestamp="1588231157969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
-    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1588197755042">
+    <state width="1877" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588231157969" />
+    <state width="1877" height="279" key="GridCell.Tab.0.center" timestamp="1588231157969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
-    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1588197755042">
+    <state width="1877" height="279" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588231157969" />
+    <state width="1877" height="279" key="GridCell.Tab.0.left" timestamp="1588231157968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
-    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1588197755042">
+    <state width="1877" height="279" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588231157968" />
+    <state width="1877" height="279" key="GridCell.Tab.0.right" timestamp="1588231157969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197755042" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588155401327">
+    <state width="1877" height="279" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588231157969" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1588198038992">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588155401327" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1588197747610">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588198038992" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1588231151556">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197747610" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588197746841">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588231151556" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588231150536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588197746841" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1080@0.0.1920.1040" timestamp="1588231150536" />
   </component>
 </project>

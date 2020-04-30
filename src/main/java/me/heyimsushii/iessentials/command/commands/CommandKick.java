@@ -10,21 +10,21 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandBan extends AbstractCommand {
+public class CommandKick extends AbstractCommand {
 
     @Override
     public String getCommand() {
-        return "ban";
+        return "kick";
     }
 
     @Override
     public String getDescription() {
-        return "Bans a player.";
+        return "Kicks a player.";
     }
 
     @Override
     public String getPermission() {
-        return "iessentials.ban";
+        return "iessentials.kick";
     }
 
     @Override
@@ -48,17 +48,11 @@ public class CommandBan extends AbstractCommand {
         }
 
         if (target.isOp()) {
-            player.sendMessage(IEssentials.getMessages().getMessage("player-not-bannable"));
+            player.sendMessage(IEssentials.getMessages().getMessage("player-not-kickable"));
             return;
         }
 
-        if (target.isBanned()) {
-            player.sendMessage(IEssentials.getMessages().getMessage("player-already-banned"));
-            return;
-        }
-
-        Bukkit.getBanList(BanList.Type.NAME).addBan(target.getName(), TextUtils.concatenateArgs(args, 1), null, null);
         target.getPlayer().kickPlayer(TextUtils.concatenateArgs(args, 1));
-        player.sendMessage(IEssentials.getMessages().getMessage("player-banned").replace("{PLAYERNAME}", target.getName()));
+        player.sendMessage(IEssentials.getMessages().getMessage("player-banned").replace("{PLAYERNAME}", target.getName()).replace("{PLAYERNAME}", target.getName()));
     }
 }

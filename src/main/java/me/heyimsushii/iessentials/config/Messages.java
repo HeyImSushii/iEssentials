@@ -18,17 +18,13 @@ public class Messages {
             try {
                 file.createNewFile();
 
-                config.options().header("# Message File for iEssentials v1.1.0");
+                config.options().header("# Message File for iEssentials v1");
 
-                /* Prefix */
                 set("prefix", "&8&l| &e&liEssentials &8&l| ");
 
-                /* Error Messages */
                 set("player-only-command", getMessageRaw("prefix") + "&4You must be a player in order to execute this command!");
                 set("no-permission", getMessageRaw("prefix") + "&4Sorry, but you do not have the sufficient permission to do this.");
                 set("invalid-args", getMessageRaw("prefix") + "&7/{COMMAND} {USAGE}");
-
-                /* Messages */
                 set("ping-message", getMessageRaw("prefix") + "&7Pong!");
                 set("gamemode-changed", getMessageRaw("prefix") + "&7You are now in &e{GAMEMODE} mode.");
                 set("player-healed", getMessageRaw("prefix") + "&7You have been healed by &e{PLAYERNAME}.");
@@ -37,6 +33,8 @@ public class Messages {
                 set("player-already-banned", getMessage("prefix") + "&4Player is already banned.");
                 set("player-not-bannable", getMessage("prefix") + "&4You cannot ban this player.");
                 set("player-banned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been banned.");
+                set("player-not-kickable", getMessage("prefix") + "&4You cannot kick this player.");
+                set("player-kicked", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been kicked.");
                 save();
             } catch (IOException e) {
                 e.printStackTrace();

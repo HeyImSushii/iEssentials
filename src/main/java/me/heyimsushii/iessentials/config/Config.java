@@ -19,12 +19,15 @@ public class Config {
 
                 config.options().header("Config File for iEssentials v1.1.0");
 
-                /* Chat / Messages */
+                /* Chat */
                 set("enable-custom-join-message", false);
                 set("custom-join-message", "&e{PLAYERNAME} joined.");
 
                 set("enable-custom-quit-message", false);
                 set("custom-quit-message", "&e{PLAYERNAME} left.");
+
+                set("enable-custom-chat-format", false);
+                set("custom-chat-format", "{DISPLAYNAME} &8» &r{MESSAGE}");
                 save();
             } catch (IOException e) {
                 e.printStackTrace();

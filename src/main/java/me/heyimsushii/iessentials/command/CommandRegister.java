@@ -20,6 +20,7 @@ public class CommandRegister {
         addCommand("feed", new CommandFeed());
         addCommand("banlist", new CommandBanlist());
         addCommand("ban", new CommandBan());
+        addCommand("kick", new CommandKick());
 
         for (AbstractCommand command : commands.values())
             IEssentials.getInstance().getCommand(command.getCommand()).setExecutor(command);
