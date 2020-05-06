@@ -21,6 +21,8 @@ public class CommandRegister {
         addCommand("banlist", new CommandBanlist());
         addCommand("ban", new CommandBan());
         addCommand("kick", new CommandKick());
+        addCommand("unban", new CommandUnban());
+        addCommand("clearchat", new CommandClearchat());
 
         for (AbstractCommand command : commands.values())
             IEssentials.getInstance().getCommand(command.getCommand()).setExecutor(command);

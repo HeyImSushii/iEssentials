@@ -3,6 +3,7 @@ package me.heyimsushii.iessentials.command.commands;
 import me.heyimsushii.iessentials.command.AbstractCommand;
 import me.heyimsushii.iessentials.util.TextUtils;
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -41,19 +42,17 @@ public class CommandBanlist extends AbstractCommand {
         Player player = (Player) sender;
 
         if (Bukkit.getBannedPlayers().isEmpty()) {
-            player.sendMessage(TextUtils.line(64));
+            player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
             player.sendMessage(" ");
             player.sendMessage(TextUtils.centerText("&e&lThere is no banned players"));
             player.sendMessage(" ");
-            player.sendMessage(TextUtils.line(64));
+            player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
             return;
         }
-        player.sendMessage(TextUtils.line(64));
-        player.sendMessage(" ");
-        player.sendMessage(TextUtils.centerText("&e&lBanned Players: " + Bukkit.getBannedPlayers().size()));
+        player.sendMessage(TextUtils.centerLineText("&7&m", "Banned Players"));
         player.sendMessage(" ");
         player.sendMessage(Bukkit.getBannedPlayers().stream().map(OfflinePlayer::getName).collect(Collectors.joining(", ")));
         player.sendMessage(" ");
-        player.sendMessage(TextUtils.line(64));
+        player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
     }
 }

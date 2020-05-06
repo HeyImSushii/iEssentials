@@ -12,13 +12,21 @@ public class TextUtils {
         return String.join(" ", Arrays.copyOfRange(args, startIndex, args.length));
     }
 
-    public static String line(int length) {
-        return String.format("%s%s", ChatColor.GRAY + "" + ChatColor.STRIKETHROUGH, Strings.repeat(" ", length));
+    public static String line(ChatColor textColour, int length) {
+        return String.format("%s%s", textColour + "" + ChatColor.STRIKETHROUGH, Strings.repeat(" ", length));
     }
 
-    public static String centerText(String content) {
+    public static String centerText(String text) {
         int maxWidth = 64;
-        int spaces = (int) Math.round((maxWidth - 1.4 * ChatColor.stripColor(content).length()) / 2);
-        return StringUtils.repeat(" ", spaces) + ChatColor.translateAlternateColorCodes('&', content);
+        int spaces = (int) Math.round((maxWidth - 1.4 * ChatColor.stripColor(text).length()) / 2);
+        return StringUtils.repeat(" ", spaces) + ChatColor.translateAlternateColorCodes('&', text);
+    }
+
+    public static String centerLineText(String lineColour, String text) {
+        int maxWidth = 64;
+        int spaces = (int) Math.round((maxWidth - 1.4 * ChatColor.stripColor(text).length()) / 2);
+        return Strings.repeat(ChatColor.translateAlternateColorCodes('&', lineColour) + " ", spaces)
+                + ChatColor.translateAlternateColorCodes('&', "&r " + text + " &r")
+                + Strings.repeat(ChatColor.translateAlternateColorCodes('&', lineColour) + " ", spaces);
     }
 }

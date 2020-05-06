@@ -2,29 +2,28 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.command.AbstractCommand;
 import me.heyimsushii.iessentials.util.TextUtils;
+import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import javax.xml.soap.Text;
-import java.util.stream.Collectors;
+public class CommandClearchat extends AbstractCommand {
 
-public class CommandList extends AbstractCommand {
     @Override
     public String getCommand() {
-        return "list";
+        return "clearchat";
     }
 
     @Override
     public String getDescription() {
-        return "Shows a list of online players.";
+        return "Clears the chat.";
     }
 
     @Override
     public String getPermission() {
-        return "iessentials.list";
+        return "iessentials.clearchat";
     }
 
     @Override
@@ -39,12 +38,17 @@ public class CommandList extends AbstractCommand {
 
     @Override
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
-        Player player = (Player) sender;
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            if (player.hasPermission("iessentials.bypass.chatclear")) {
+                player.sendMessage("the chat wasnt cleared");
+                return;
+            }
+            return;
+        }
 
-        player.sendMessage(TextUtils.centerLineText("&7&m", "&e&lPlayers Online: " + Bukkit.getOnlinePlayers().size() + "/" + Bukkit.getMaxPlayers()));
-        player.sendMessage(" ");
-        player.sendMessage(Bukkit.getOnlinePlayers().stream().map(Player::getName).collect(Collectors.joining(", ")));
-        player.sendMessage(" ");
-        player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
+        Bukkit.broadcastMessage(StringUtils.repeat("\n", 512));
+        Bukkit.broadcastMessage(TextUtils.line(ChatColor.GRAY, 64));
+        Bukkit.broadcastMessage(TextUtils.centerText("\n&e&lThe chat has been cleared!\n"));
+        Bukkit.broadcastMessage(TextUtils.line(ChatColor.GRAY, 64));
     }
 }

@@ -1,6 +1,7 @@
 package me.heyimsushii.iessentials.events;
 
 import me.heyimsushii.iessentials.IEssentials;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -12,7 +13,9 @@ public class PlayerChat implements Listener {
     public void onChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
         if (IEssentials.getConfigFile().getConfig().get("enable-custom-chat-format").equals(true)) {
-            event.setFormat(IEssentials.getConfigFile().getConfig().get("custom-chat-format").toString());
+            event.setFormat(ChatColor.translateAlternateColorCodes('&', IEssentials.getConfigFile().getConfig().get("custom-chat-format").toString())
+                    .replace("{DISPLAYNAME}", player.getDisplayName())
+                    .replace("{MESSAGE}", event.getMessage()));
         }
     }
 }

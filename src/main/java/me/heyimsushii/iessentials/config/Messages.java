@@ -35,6 +35,9 @@ public class Messages {
                 set("player-banned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been banned.");
                 set("player-not-kickable", getMessage("prefix") + "&4You cannot kick this player.");
                 set("player-kicked", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been kicked.");
+                set("player-not-banned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7is not banned.");
+                set("player-unbanned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been unbanned.");
+                set("fly-speed-changed", getMessage("prefix") + "&7Your fly speed is now &e{FLYSPEED}&7.");
                 save();
             } catch (IOException e) {
                 e.printStackTrace();

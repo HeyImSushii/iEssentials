@@ -44,7 +44,7 @@ public class CommandWhois extends AbstractCommand {
         int y = target.getLocation().getBlockY();
         int z = target.getLocation().getBlockX();
 
-        player.sendMessage(TextUtils.line(64));
+        player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Player Name: " + ChatColor.GRAY + target.getName());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " IP Address: " + ChatColor.GRAY + target.getAddress().getHostName());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Health: " + ChatColor.GRAY + target.getHealth() + "/" + target.getMaxHealth());
@@ -53,6 +53,6 @@ public class CommandWhois extends AbstractCommand {
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Location: XZY: " + ChatColor.GRAY + x + " / " + y + " / " + z);
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Gamemode: " + ChatColor.GRAY + target.getGameMode().name().toLowerCase());
         player.sendMessage(ChatColor.DARK_GRAY + "»" + ChatColor.YELLOW + " Fly mode: " + ChatColor.GRAY + target.isFlying());
-        player.sendMessage(TextUtils.line(64));
+        player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
     }
 }

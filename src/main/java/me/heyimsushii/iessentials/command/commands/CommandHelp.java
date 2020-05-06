@@ -32,10 +32,10 @@ public class CommandHelp extends AbstractCommand {
 
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
-        player.sendMessage(TextUtils.line(64));
+        player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
         for (AbstractCommand cmd : IEssentials.getCommandRegister().getCommands().values()) {
             player.sendMessage(ChatColor.YELLOW + "/" + cmd.getCommand() + " " + cmd.getUsage() + ChatColor.DARK_GRAY + " - " + ChatColor.GRAY + cmd.getDescription());
         }
-        player.sendMessage(TextUtils.line(64));
+        player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
     }
 }

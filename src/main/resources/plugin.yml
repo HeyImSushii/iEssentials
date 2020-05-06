@@ -1,7 +1,7 @@
 name: iEssentials
 version: 1.0.0
 main: me.heyimsushii.iessentials.IEssentials
-api-version: 1.15.0
+api-version: 1.15
 author: Ludvik "HeyImSushii" Sørensen
 commands:
   help:
@@ -35,3 +35,16 @@ commands:
   ban:
     description: Bans a player.
     permission: iessentials.ban
+  kick:
+    description: Kicks a player.
+    permission: iessentials.kick
+  unban:
+    description: Unbans a player.
+    permission: iessentials.unban
+    aliases:
+      - pardon
+  clearchat:
+    description: Clears the chat.
+    permission: iessentials.clearchat
+    aliases:
+      - cc
