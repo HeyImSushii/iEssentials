@@ -2,7 +2,6 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.command.AbstractCommand;
 import me.heyimsushii.iessentials.util.TextUtils;
-import org.apache.commons.lang.StringUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -40,15 +39,22 @@ public class CommandClearchat extends AbstractCommand {
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         for (Player player : Bukkit.getOnlinePlayers()) {
             if (player.hasPermission("iessentials.bypass.chatclear")) {
-                player.sendMessage("the chat wasnt cleared");
+                player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
+                player.sendMessage(" ");
+                player.sendMessage(TextUtils.centerText("&e&lThe chat was cleared, but not for you."));
+                player.sendMessage(" ");
+                player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
                 return;
             }
             return;
         }
 
-        Bukkit.broadcastMessage(StringUtils.repeat("\n", 512));
+        for (int i = 0; i <= 512; i++) Bukkit.broadcastMessage(" ");
+
         Bukkit.broadcastMessage(TextUtils.line(ChatColor.GRAY, 64));
-        Bukkit.broadcastMessage(TextUtils.centerText("\n&e&lThe chat has been cleared!\n"));
+        Bukkit.broadcastMessage(" ");
+        Bukkit.broadcastMessage(TextUtils.centerText("&e&lThe chat has been cleared!"));
+        Bukkit.broadcastMessage(" ");
         Bukkit.broadcastMessage(TextUtils.line(ChatColor.GRAY, 64));
     }
 }

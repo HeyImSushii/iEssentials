@@ -1,5 +1,6 @@
 package me.heyimsushii.iessentials;
 
+import me.heyimsushii.iessentials.manager.PlayerManager;
 import me.heyimsushii.iessentials.command.CommandRegister;
 import me.heyimsushii.iessentials.config.Config;
 import me.heyimsushii.iessentials.config.Messages;
@@ -18,12 +19,16 @@ public class IEssentials extends JavaPlugin {
     private static Config config;
     private static Messages messages;
 
+    private static PlayerManager playerManager;
+
     @Override
     public void onEnable() {
         instance = this;
         commandRegister = new CommandRegister();
         config = new Config();
         messages = new Messages();
+
+        playerManager = new PlayerManager();
 
         if (!getDataFolder().exists()) getDataFolder().mkdirs();
 
@@ -37,6 +42,9 @@ public class IEssentials extends JavaPlugin {
     public void onDisable() {
         instance = null;
         commandRegister = null;
+        messages = null;
+
+        playerManager = null;
     }
 
     private void registerEvents() {
@@ -61,5 +69,9 @@ public class IEssentials extends JavaPlugin {
 
     public static Messages getMessages() {
         return messages;
+    }
+
+    public static PlayerManager getPlayerManager() {
+        return playerManager;
     }
 }

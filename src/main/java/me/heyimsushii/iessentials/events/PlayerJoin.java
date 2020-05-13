@@ -13,6 +13,10 @@ public class PlayerJoin implements Listener {
     public void onJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
+        IEssentials.getPlayerManager().load(player.getUniqueId());
+        IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setPlayerName(player.getName());
+        IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setUUID(player.getUniqueId());
+
         if (IEssentials.getConfigFile().getConfig().getBoolean("enable-custom-join-message")) {
             event.setJoinMessage(ChatColor.translateAlternateColorCodes('&', IEssentials.getConfigFile().getConfig().getString("custom-join-message")
                     .replace("{PLAYERNAME}", player.getName())));
