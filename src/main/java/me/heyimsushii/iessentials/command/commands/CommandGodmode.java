@@ -7,26 +7,26 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandHeal extends AbstractCommand {
+public class CommandGodmode extends AbstractCommand {
 
     @Override
     public String getCommand() {
-        return "heal";
+        return "godmode";
     }
 
     @Override
     public String getDescription() {
-        return "Heals a player.";
+        return "Toggles god mode.";
     }
 
     @Override
     public String getPermission() {
-        return "iessentials.heal";
+        return "iessentials.godmode";
     }
 
     @Override
     public String getUsage() {
-        return "[player]";
+        return "";
     }
 
     @Override
@@ -37,14 +37,13 @@ public class CommandHeal extends AbstractCommand {
     @Override
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
-        Player target = Bukkit.getPlayer(args[1]);
 
-        if (args.length == 0) {
-            player.setHealth(player.getHealthScale());
-            player.sendMessage(IEssentials.getMessages().getMessage("player-healed"));
+        if (!IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).getGodMode()) {
+            IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setGodMode(true);
+            player.sendMessage(IEssentials.getMessages().getMessage("godmode-enabled"));
         } else {
-            target.setHealth(target.getHealthScale());
-            target.sendMessage(IEssentials.getMessages().getMessage("player-healed"));
+            IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setGodMode(false);
+            player.sendMessage(IEssentials.getMessages().getMessage("godmode-disabled"));
         }
     }
 }

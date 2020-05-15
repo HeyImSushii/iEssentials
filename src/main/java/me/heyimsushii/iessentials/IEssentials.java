@@ -1,13 +1,10 @@
 package me.heyimsushii.iessentials;
 
+import me.heyimsushii.iessentials.events.*;
 import me.heyimsushii.iessentials.manager.PlayerManager;
 import me.heyimsushii.iessentials.command.CommandRegister;
 import me.heyimsushii.iessentials.config.Config;
 import me.heyimsushii.iessentials.config.Messages;
-import me.heyimsushii.iessentials.events.PlayerChat;
-import me.heyimsushii.iessentials.events.PlayerJoin;
-import me.heyimsushii.iessentials.events.PlayerLeave;
-import me.heyimsushii.iessentials.events.PlayerLogin;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -53,6 +50,7 @@ public class IEssentials extends JavaPlugin {
         pm.registerEvents(new PlayerLeave(), this);
         pm.registerEvents(new PlayerLogin(), this);
         pm.registerEvents(new PlayerChat(), this);
+        pm.registerEvents(new PlayerDamage(), this);
     }
 
     public static IEssentials getInstance() {

@@ -43,4 +43,12 @@ public class PlayerData {
     public void setUUID(UUID uuid) {
         set("uuid", uuid.toString());
     }
+
+    public boolean getGodMode() {
+        return config.getBoolean("godmode");
+    }
+
+    public void setGodMode(boolean godmode) {
+        set("godmode", godmode);
+    }
 }

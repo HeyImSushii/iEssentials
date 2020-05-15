@@ -23,6 +23,8 @@ public class CommandRegister {
         addCommand("kick", new CommandKick());
         addCommand("unban", new CommandUnban());
         addCommand("clearchat", new CommandClearchat());
+        addCommand("godmode", new CommandGodmode());
+        addCommand("fly", new CommandFly());
 
         for (AbstractCommand command : commands.values())
             IEssentials.getInstance().getCommand(command.getCommand()).setExecutor(command);

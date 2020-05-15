@@ -26,20 +26,25 @@ public class CommandFeed extends AbstractCommand {
 
     @Override
     public String getUsage() {
-        return "<player>";
+        return "[player]";
     }
 
     @Override
     public int getRequiredArgs() {
-        return 1;
+        return 0;
     }
 
     @Override
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
-        Player target = Bukkit.getPlayer(args[0]);
+        Player target = Bukkit.getPlayer(args[1]);
 
-        target.setFoodLevel(20);
-        target.sendMessage(IEssentials.getMessages().getMessage("player-fed").replace("{PLAYERNAME}", player.getName()));
+        if (args.length == 0) {
+            player.setFoodLevel(20);
+            player.sendMessage(IEssentials.getMessages().getMessage("player-fed"));
+        } else {
+            target.setFoodLevel(20);
+            target.sendMessage(IEssentials.getMessages().getMessage("player-fed"));
+        }
     }
 }

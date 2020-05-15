@@ -27,8 +27,8 @@ public class Messages {
                 set("invalid-args", getMessageRaw("prefix") + "&7/{COMMAND} {USAGE}");
                 set("ping-message", getMessageRaw("prefix") + "&7Pong!");
                 set("gamemode-changed", getMessageRaw("prefix") + "&7You are now in &e{GAMEMODE} mode.");
-                set("player-healed", getMessageRaw("prefix") + "&7You have been healed by &e{PLAYERNAME}.");
-                set("player-fed", getMessageRaw("prefix") + "&7You have been fed by &e{PLAYERNAME}.");
+                set("player-healed", getMessageRaw("prefix") + "&7You have been healed.");
+                set("player-fed", getMessageRaw("prefix") + "&7You have been fed.");
                 set("player-not-found", getMessage("prefix") + "&4Player not found.");
                 set("player-already-banned", getMessage("prefix") + "&4Player is already banned.");
                 set("player-not-bannable", getMessage("prefix") + "&4You cannot ban this player.");
@@ -37,7 +37,10 @@ public class Messages {
                 set("player-kicked", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been kicked.");
                 set("player-not-banned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7is not banned.");
                 set("player-unbanned", getMessage("prefix") + "&7The player &e{PLAYERNAME} &7has been unbanned.");
-                set("fly-speed-changed", getMessage("prefix") + "&7Your fly speed is now &e{FLYSPEED}&7.");
+                set("godmode-enabled", getMessage("prefix") + "&7You are no longer in &egod mode&7.");
+                set("godmode-disabled", getMessage("prefix") + "&7You are now in &egod mode&7.");
+                set("fly-enabled", getMessage("prefix") + "&7Flight mode is now &enabled&7.");
+                set("fly-disabled", getMessage("prefix") + "&7Flight mode is now &edisabled&7.");
                 save();
             } catch (IOException e) {
                 e.printStackTrace();

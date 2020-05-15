@@ -2,31 +2,30 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class CommandHeal extends AbstractCommand {
+public class CommandFly extends AbstractCommand {
 
     @Override
     public String getCommand() {
-        return "heal";
+        return "fly";
     }
 
     @Override
     public String getDescription() {
-        return "Heals a player.";
+        return "Toggles fly.";
     }
 
     @Override
     public String getPermission() {
-        return "iessentials.heal";
+        return "iessentials.fly";
     }
 
     @Override
     public String getUsage() {
-        return "[player]";
+        return "";
     }
 
     @Override
@@ -37,14 +36,15 @@ public class CommandHeal extends AbstractCommand {
     @Override
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
-        Player target = Bukkit.getPlayer(args[1]);
 
-        if (args.length == 0) {
-            player.setHealth(player.getHealthScale());
-            player.sendMessage(IEssentials.getMessages().getMessage("player-healed"));
+        if (!player.isFlying()) {
+            player.setFlying(true);
+            player.setAllowFlight(true);
+            player.sendMessage(IEssentials.getMessages().getMessage("fly-enabled"));
         } else {
-            target.setHealth(target.getHealthScale());
-            target.sendMessage(IEssentials.getMessages().getMessage("player-healed"));
+            player.setFlying(false);
+            player.setAllowFlight(false);
+            player.sendMessage(IEssentials.getMessages().getMessage("fly-disabled"));
         }
     }
 }

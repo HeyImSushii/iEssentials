@@ -48,3 +48,13 @@ commands:
     permission: iessentials.clearchat
     aliases:
       - cc
+  godmode:
+    description: Toggles godmode.
+    permission: iessentials.godmode
+    aliases:
+      - tgm
+  fly:
+    description: Toggles flight mode.
+    permission: iessentials.fly
+    aliases:
+      - flight
