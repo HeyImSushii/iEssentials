@@ -2,6 +2,7 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
+import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -58,7 +59,6 @@ public class CommandGamemode extends AbstractCommand {
 
     private void setMode(Player player, GameMode gameMode) {
         player.setGameMode(gameMode);
-        player.sendMessage(IEssentials.getMessages().getMessage("gamemode-changed")
-                .replace("{GAMEMODE}", gameMode.name().toLowerCase()));
+        Lang.sendMessage(player, Lang.GAMEMODE_CHANGED);
     }
 }

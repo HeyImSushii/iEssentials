@@ -1,10 +1,9 @@
 package me.heyimsushii.iessentials;
 
 import me.heyimsushii.iessentials.events.*;
-import me.heyimsushii.iessentials.manager.PlayerManager;
+import me.heyimsushii.iessentials.data.PlayerManager;
 import me.heyimsushii.iessentials.command.CommandRegister;
-import me.heyimsushii.iessentials.config.Config;
-import me.heyimsushii.iessentials.config.Messages;
+import me.heyimsushii.iessentials.lang.LangManager;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -14,23 +13,23 @@ public class IEssentials extends JavaPlugin {
     private static IEssentials instance;
     private static CommandRegister commandRegister;
     private static Config config;
-    private static Messages messages;
 
     private static PlayerManager playerManager;
+    private static LangManager langManager;
 
     @Override
     public void onEnable() {
         instance = this;
         commandRegister = new CommandRegister();
         config = new Config();
-        messages = new Messages();
 
         playerManager = new PlayerManager();
+        langManager = new LangManager();
 
         if (!getDataFolder().exists()) getDataFolder().mkdirs();
 
         config.load();
-        messages.load();
+        langManager.load();
 
         registerEvents();
     }
@@ -39,9 +38,9 @@ public class IEssentials extends JavaPlugin {
     public void onDisable() {
         instance = null;
         commandRegister = null;
-        messages = null;
 
         playerManager = null;
+        langManager = null;
     }
 
     private void registerEvents() {
@@ -65,11 +64,11 @@ public class IEssentials extends JavaPlugin {
         return config;
     }
 
-    public static Messages getMessages() {
-        return messages;
-    }
-
     public static PlayerManager getPlayerManager() {
         return playerManager;
+    }
+
+    public static LangManager getLangManager() {
+        return langManager;
     }
 }

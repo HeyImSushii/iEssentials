@@ -2,6 +2,7 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
+import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -40,11 +41,11 @@ public class CommandFly extends AbstractCommand {
         if (!player.isFlying()) {
             player.setFlying(true);
             player.setAllowFlight(true);
-            player.sendMessage(IEssentials.getMessages().getMessage("fly-enabled"));
+            Lang.sendMessage(player, Lang.FLY_ENABLED);
         } else {
             player.setFlying(false);
             player.setAllowFlight(false);
-            player.sendMessage(IEssentials.getMessages().getMessage("fly-disabled"));
+            Lang.sendMessage(player, Lang.FLY_DISABLED);
         }
     }
 }

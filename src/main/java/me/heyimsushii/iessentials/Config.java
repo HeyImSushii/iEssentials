@@ -1,4 +1,4 @@
-package me.heyimsushii.iessentials.config;
+package me.heyimsushii.iessentials;
 
 import me.heyimsushii.iessentials.IEssentials;
 import org.bukkit.configuration.InvalidConfigurationException;

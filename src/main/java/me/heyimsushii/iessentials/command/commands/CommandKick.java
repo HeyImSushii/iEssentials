@@ -2,6 +2,7 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
+import me.heyimsushii.iessentials.lang.Lang;
 import me.heyimsushii.iessentials.util.TextUtils;
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
@@ -43,16 +44,16 @@ public class CommandKick extends AbstractCommand {
         OfflinePlayer target = Bukkit.getPlayer(args[0]);
 
         if (target == null) {
-            player.sendMessage(IEssentials.getMessages().getMessage("player-not-found"));
+            Lang.sendMessage(player, Lang.PLAYER_NOT_FOUND);
             return;
         }
 
         if (target.isOp()) {
-            player.sendMessage(IEssentials.getMessages().getMessage("player-not-kickable"));
+            Lang.sendMessage(player, Lang.PLAYER_NOT_KICKABLE);
             return;
         }
 
         target.getPlayer().kickPlayer(TextUtils.concatenateArgs(args, 1));
-        player.sendMessage(IEssentials.getMessages().getMessage("player-banned").replace("{PLAYERNAME}", target.getName()).replace("{PLAYERNAME}", target.getName()));
+        Lang.sendMessage(player, Lang.PLAYER_KICKED);
     }
 }

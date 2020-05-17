@@ -2,6 +2,7 @@ package me.heyimsushii.iessentials.command.commands;
 
 import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
+import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -41,10 +42,10 @@ public class CommandFeed extends AbstractCommand {
 
         if (args.length == 0) {
             player.setFoodLevel(20);
-            player.sendMessage(IEssentials.getMessages().getMessage("player-fed"));
+            Lang.sendMessage(player, Lang.PLAYER_FED);
         } else {
             target.setFoodLevel(20);
-            target.sendMessage(IEssentials.getMessages().getMessage("player-fed"));
+            Lang.sendMessage(target, Lang.PLAYER_FED);
         }
     }
 }

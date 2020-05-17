@@ -1,8 +1,7 @@
 package me.heyimsushii.iessentials.command.commands;
 
-import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
-import me.heyimsushii.iessentials.util.TextUtils;
+import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.BanList;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
@@ -43,16 +42,16 @@ public class CommandUnban extends AbstractCommand {
         OfflinePlayer target = Bukkit.getPlayer(args[0]);
 
         if (target == null) {
-            player.sendMessage(IEssentials.getMessages().getMessage("player-not-found"));
+            Lang.sendMessage(player, Lang.PLAYER_NOT_FOUND);
             return;
         }
 
         if (!target.isBanned()) {
-            player.sendMessage(IEssentials.getMessages().getMessage("player-not-banned").replace("{PLAYERNAME}", target.getName()));
+            Lang.sendMessage(player, Lang.PLAYER_NOT_BANNED);
             return;
         }
 
         Bukkit.getBanList(BanList.Type.NAME).pardon(target.getName());
-        player.sendMessage(IEssentials.getMessages().getMessage("player-unbanned").replace("{PLAYERNAME}", target.getName()));
+        Lang.sendMessage(player, Lang.PLAYER_UNBANNED);
     }
 }

@@ -1,10 +1,12 @@
 package me.heyimsushii.iessentials.command;
 
 import me.heyimsushii.iessentials.IEssentials;
+import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.omg.CORBA.NO_PERMISSION;
 
 public abstract class AbstractCommand implements CommandExecutor {
 
@@ -21,19 +23,13 @@ public abstract class AbstractCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
 
-        if (!(sender instanceof Player)) {
-            sender.sendMessage(IEssentials.getMessages().getMessage("player-only-command"));
-            return true;
-        }
-
         if (!(sender.hasPermission(getPermission()))) {
-            player.sendMessage(IEssentials.getMessages().getMessage("no-permission"));
+            Lang.sendMessage(player, Lang.NO_PERMISSION);
             return true;
         }
 
         if (args.length < getRequiredArgs()) {
-            player.sendMessage(IEssentials.getMessages().getMessage("invalid-args")
-                    .replace("{COMMAND}", getCommand()).replace("{USAGE}", getUsage()));
+            Lang.sendMessage(player, Lang.INVALID_ARGS);
             return true;
         }
         execute(sender, command, commandName, args);

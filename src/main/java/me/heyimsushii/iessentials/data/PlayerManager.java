@@ -1,7 +1,6 @@
-package me.heyimsushii.iessentials.manager;
+package me.heyimsushii.iessentials.data;
 
 import me.heyimsushii.iessentials.IEssentials;
-import me.heyimsushii.iessentials.data.PlayerData;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
