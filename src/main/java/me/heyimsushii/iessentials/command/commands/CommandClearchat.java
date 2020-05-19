@@ -41,7 +41,7 @@ public class CommandClearchat extends AbstractCommand {
             if (player.hasPermission("iessentials.bypass.chatclear")) {
                 player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
                 player.sendMessage(" ");
-                player.sendMessage(TextUtils.centerText("&e&lThe chat was cleared, but not for you."));
+                player.sendMessage(TextUtils.centerText("&e&lThe chat was cleared, but you were excluded due to permission."));
                 player.sendMessage(" ");
                 player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
                 return;

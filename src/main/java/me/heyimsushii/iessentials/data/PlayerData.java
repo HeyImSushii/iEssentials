@@ -51,4 +51,12 @@ public class PlayerData {
     public void setGodMode(boolean godmode) {
         set("godmode", godmode);
     }
+
+    public boolean getFly() {
+        return config.getBoolean("fly");
+    }
+
+    public void setFly(boolean value) {
+        set("fly", value);
+    }
 }

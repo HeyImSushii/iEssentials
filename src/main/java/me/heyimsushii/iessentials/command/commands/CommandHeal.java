@@ -1,6 +1,5 @@
 package me.heyimsushii.iessentials.command.commands;
 
-import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
 import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.Bukkit;
@@ -42,10 +41,10 @@ public class CommandHeal extends AbstractCommand {
 
         if (args.length == 0) {
             player.setHealth(player.getHealthScale());
-            Lang.sendMessage(player, Lang.PLAYER_HEALED);
+            player.sendMessage(Lang.getMessage(Lang.PLAYER_HEALED));
         } else {
             target.setHealth(target.getHealthScale());
-            Lang.sendMessage(target, Lang.PLAYER_HEALED);
+            player.sendMessage(Lang.getMessage(Lang.PLAYER_HEALED));
         }
     }
 }

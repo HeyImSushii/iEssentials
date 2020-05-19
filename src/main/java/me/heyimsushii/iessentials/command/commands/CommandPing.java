@@ -1,6 +1,5 @@
 package me.heyimsushii.iessentials.command.commands;
 
-import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
 import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.command.Command;
@@ -36,6 +35,6 @@ public class CommandPing extends AbstractCommand {
     @Override
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
-        Lang.sendMessage(player, Lang.PING_MESSAGE);
+        player.sendMessage(Lang.getMessage(Lang.PING_MESSAGE));
     }
 }

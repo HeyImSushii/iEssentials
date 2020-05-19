@@ -2,7 +2,6 @@ package me.heyimsushii.iessentials.lang;
 
 import me.heyimsushii.iessentials.IEssentials;
 import org.bukkit.ChatColor;
-import org.bukkit.entity.Player;
 
 public enum Lang {
 
@@ -13,7 +12,7 @@ public enum Lang {
     PING_MESSAGE("ping-message", PREFIX.message + "&7Pong!"),
     PLAYER_HEALED("player-healed", PREFIX.message + "&7You have been healed."),
     PLAYER_FED("player-fed", PREFIX.message + "&7You have been fed."),
-    GAMEMODE_CHANGED("gamemode-changed", PREFIX.message + "&7You are now in &e{GAMEMODE} mode."),
+    GAMEMODE_CHANGED("gamemode-changed", PREFIX.message + "&7You are now in &e{GAMEMODE}&7 mode."),
     PLAYER_BANNED("player-banned", PREFIX.message + "&7The player &e{PLAYERNAME} &7has been banned."),
     PLAYER_KICKED("player-kicked", PREFIX.message + "&7The player &e{PLAYERNAME} &7has been kicked."),
     PLAYER_UNBANNED("player-unbanned", PREFIX.message + "&7The player &e{PLAYERNAME} &7has been unbanned."),
@@ -21,7 +20,8 @@ public enum Lang {
     GODMODE_DISABLED("godmode-disabled", PREFIX.message + "&7You are no longer in &egod mode&7."),
     FLY_ENABLED("fly-enabled", PREFIX.message + "&7Flight mode is now &enabled&7."),
     FLY_DISABLED("fly-disabled", PREFIX.message + "&7Flight mode is now &edisabled&7."),
-
+    EXP_POINTS_ADDED("exp-points-added", PREFIX.message + "&7You have been given &e{AMOUNT}&7 EXP points."),
+    EXP_LEVEL_CHANGED("ex-level-changed", PREFIX.message + "&7You have been given &e{AMOUNT}&7 EXP levels."),
 
     /* Errors */
     NO_PERMISSION("no-permission", PREFIX.message + "&4Sorry, but you do not have the sufficient permission to do this."),
@@ -45,11 +45,15 @@ public enum Lang {
         return prefix;
     }
 
+    public String getRawMessage() {
+        return message;
+    }
+
     public String getMessage() {
         return message;
     }
 
-    public static void sendMessage(Player player, Lang lang) {
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&', IEssentials.getLangManager().getConfig().getString(lang.getPrefix())));
+    public static String getMessage(Lang lang) {
+        return ChatColor.translateAlternateColorCodes('&', IEssentials.getLangManager().getConfig().getString(lang.getPrefix()));
     }
 }

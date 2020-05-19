@@ -58,3 +58,11 @@ commands:
     permission: iessentials.fly
     aliases:
       - flight
+  exp:
+    description: Gives a certain amount of EXP points or levels to a player.
+    permission: iessentials.exp
+    aliases:
+      - level
+      - levels
+      - exp
+      - xp

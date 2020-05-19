@@ -13,6 +13,8 @@ public class PlayerLeave implements Listener {
     public void onLeave(PlayerQuitEvent event) {
         Player player = event.getPlayer();
 
+        IEssentials.getPlayerManager().save(player.getUniqueId());
+        
         if (IEssentials.getConfigFile().getConfig().getBoolean("enable-custom-quit-message")) {
             event.setQuitMessage(ChatColor.translateAlternateColorCodes('&', IEssentials.getConfigFile().getConfig().getString("custom-quit-message")
                     .replace("{PLAYERNAME}", player.getName())));

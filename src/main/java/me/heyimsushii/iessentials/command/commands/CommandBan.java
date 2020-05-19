@@ -44,22 +44,28 @@ public class CommandBan extends AbstractCommand {
         OfflinePlayer target = Bukkit.getPlayer(args[0]);
 
         if (target == null) {
-            Lang.sendMessage(player, Lang.PLAYER_NOT_FOUND);
+            player.sendMessage(Lang.getMessage(Lang.PLAYER_NOT_FOUND));
             return;
         }
 
         if (target.isOp()) {
-            Lang.sendMessage(player, Lang.PLAYER_NOT_BANNABLE);
+            player.sendMessage(Lang.getMessage(Lang.PLAYER_NOT_BANNABLE));
             return;
         }
 
         if (target.isBanned()) {
-            Lang.sendMessage(player, Lang.PLAYER_ALREADY_BANNED);
+            player.sendMessage(Lang.getMessage(Lang.PLAYER_ALREADY_BANNED));
+            return;
+        }
+
+        if (args[1].isEmpty()) {
+            Bukkit.getBanList(BanList.Type.NAME).addBan(target.getName(), "No reason provided.", null, null);
+            target.getPlayer().kickPlayer("No reason provided.");
             return;
         }
 
         Bukkit.getBanList(BanList.Type.NAME).addBan(target.getName(), TextUtils.concatenateArgs(args, 1), null, null);
         target.getPlayer().kickPlayer(TextUtils.concatenateArgs(args, 1));
-        Lang.sendMessage(player, Lang.PLAYER_BANNED);
+        player.sendMessage(Lang.getMessage(Lang.PLAYER_BANNED).replace("{PLAYERNAME}", target.getName()));
     }
 }

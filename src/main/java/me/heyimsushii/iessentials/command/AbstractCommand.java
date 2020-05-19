@@ -1,12 +1,10 @@
 package me.heyimsushii.iessentials.command;
 
-import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.lang.Lang;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.omg.CORBA.NO_PERMISSION;
 
 public abstract class AbstractCommand implements CommandExecutor {
 
@@ -24,12 +22,12 @@ public abstract class AbstractCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (!(sender.hasPermission(getPermission()))) {
-            Lang.sendMessage(player, Lang.NO_PERMISSION);
+            player.sendMessage(Lang.getMessage(Lang.NO_PERMISSION));
             return true;
         }
 
         if (args.length < getRequiredArgs()) {
-            Lang.sendMessage(player, Lang.INVALID_ARGS);
+            player.sendMessage(Lang.getMessage(Lang.INVALID_ARGS).replace("{COMMAND}", getCommand()).replace("{USAGE}", getUsage()));
             return true;
         }
         execute(sender, command, commandName, args);

@@ -51,7 +51,7 @@ public class CommandBanlist extends AbstractCommand {
         }
         player.sendMessage(TextUtils.centerLineText("&7&m", "Banned Players"));
         player.sendMessage(" ");
-        player.sendMessage(Bukkit.getBannedPlayers().stream().map(OfflinePlayer::getName).collect(Collectors.joining(", ")));
+        player.sendMessage(Bukkit.getBannedPlayers().stream().map(OfflinePlayer::getName).collect(Collectors.joining(ChatColor.GRAY + ", ")));
         player.sendMessage(" ");
         player.sendMessage(TextUtils.line(ChatColor.GRAY, 64));
     }

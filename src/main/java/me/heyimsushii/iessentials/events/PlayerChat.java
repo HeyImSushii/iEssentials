@@ -12,6 +12,7 @@ public class PlayerChat implements Listener {
     @EventHandler
     public void onChat(AsyncPlayerChatEvent event) {
         Player player = event.getPlayer();
+
         if (IEssentials.getConfigFile().getConfig().get("enable-custom-chat-format").equals(true)) {
             event.setFormat(ChatColor.translateAlternateColorCodes('&', IEssentials.getConfigFile().getConfig().get("custom-chat-format").toString())
                     .replace("{DISPLAYNAME}", player.getDisplayName())

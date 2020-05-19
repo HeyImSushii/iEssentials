@@ -38,14 +38,16 @@ public class CommandFly extends AbstractCommand {
     public void execute(CommandSender sender, Command command, String commandName, String[] args) {
         Player player = (Player) sender;
 
-        if (!player.isFlying()) {
+        if (!IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).getFly()) {
             player.setFlying(true);
             player.setAllowFlight(true);
-            Lang.sendMessage(player, Lang.FLY_ENABLED);
+            IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setFly(true);
+            player.sendMessage(Lang.getMessage(Lang.FLY_ENABLED));
         } else {
             player.setFlying(false);
             player.setAllowFlight(false);
-            Lang.sendMessage(player, Lang.FLY_DISABLED);
+            IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setFly(false);
+            player.sendMessage(Lang.getMessage(Lang.FLY_DISABLED));
         }
     }
 }

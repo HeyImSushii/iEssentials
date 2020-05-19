@@ -17,6 +17,13 @@ public class PlayerJoin implements Listener {
         IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setPlayerName(player.getName());
         IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setUUID(player.getUniqueId());
         IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setGodMode(false);
+        IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setFly(false);
+
+        if (IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).getFly()) {
+            player.setAllowFlight(true);
+            player.setFlying(true);
+            return;
+        }
 
         if (IEssentials.getConfigFile().getConfig().getBoolean("enable-custom-join-message")) {
             event.setJoinMessage(ChatColor.translateAlternateColorCodes('&', IEssentials.getConfigFile().getConfig().getString("custom-join-message")

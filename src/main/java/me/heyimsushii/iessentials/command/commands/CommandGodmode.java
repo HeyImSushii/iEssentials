@@ -3,7 +3,6 @@ package me.heyimsushii.iessentials.command.commands;
 import me.heyimsushii.iessentials.IEssentials;
 import me.heyimsushii.iessentials.command.AbstractCommand;
 import me.heyimsushii.iessentials.lang.Lang;
-import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -41,10 +40,10 @@ public class CommandGodmode extends AbstractCommand {
 
         if (!IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).getGodMode()) {
             IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setGodMode(true);
-            Lang.sendMessage(player, Lang.GODMODE_ENABLED);
+            player.sendMessage(Lang.getMessage(Lang.GODMODE_ENABLED));
         } else {
             IEssentials.getPlayerManager().getPlayerData(player.getUniqueId()).setGodMode(false);
-            Lang.sendMessage(player, Lang.GODMODE_DISABLED);
+            player.sendMessage(Lang.getMessage(Lang.GODMODE_DISABLED));
         }
     }
 }

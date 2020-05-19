@@ -25,6 +25,7 @@ public class CommandRegister {
         addCommand("clearchat", new CommandClearchat());
         addCommand("godmode", new CommandGodmode());
         addCommand("fly", new CommandFly());
+        addCommand("exp", new CommandExp());
 
         for (AbstractCommand command : commands.values())
             IEssentials.getInstance().getCommand(command.getCommand()).setExecutor(command);
